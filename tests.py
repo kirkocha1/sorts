@@ -2,7 +2,7 @@ __author__ = 'kochanik'
 
 import random
 import unittest
-from quicksort import partition, quicksort
+from quicksort import _partition, quicksort
 
 
 class TestQuicksort(unittest.TestCase):
@@ -33,12 +33,12 @@ class TestPartition(unittest.TestCase):
     def test_partition(self):
         arr = [4, 5]
         res = list(arr)
-        partition(res, 0, len(arr)-1)
+        _partition(res, 0, len(arr)-1)
         self.assertEqual(res, [4, 5])
 
     def test_invalid_input(self):
         with self.assertRaises(TypeError):
-            partition(1, 0, 0)
+            _partition(1, 0, 0)
 
 
 if __name__ == '__main__':

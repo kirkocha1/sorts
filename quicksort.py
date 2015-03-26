@@ -1,7 +1,7 @@
 import random
 
 
-def partition(a, l, r):
+def _partition(a, l, r):
     if type(a) != type([]):
         raise TypeError
 
@@ -40,7 +40,7 @@ def quicksort(a, l, r):
             return print ('wrong index')
 
         if (l < r):
-            q = partition(a, l, r)
+            q = _partition(a, l, r)
             quicksort(a, l, q - 1)
             quicksort(a, q, r)
             return a
